@@ -67,14 +67,28 @@ namespace AddressBookSystem
                 }
             }
         }
+        public void DeleteContact(string name)
+        {
+            Contact delete = new Contact();
+            foreach (var contact in addressList)
+            {
+                if (contact.FirstName == name || contact.LastName == name)
+                {
+                    delete = contact;
+                }
+            }
+            addressList.Remove(delete);
+            Console.WriteLine(name + " contact is deleted from the Address Book");
+        }
         public void Display()
         {
-            Console.WriteLine("*********************************************");
+            Console.WriteLine("********************************************");
             Console.WriteLine("Here are the contacts in your Address Book : ");
             foreach (var contact in addressList)
             {
                 Console.WriteLine(contact.FirstName + "\t" + contact.LastName + "\t" + contact.City + "\t" + contact.PhoneNumber);
             }
+            Console.WriteLine("********************************************");
         }
     }
 }
