@@ -82,13 +82,13 @@ namespace AddressBookSystem
         }
         public void Display()
         {
-            Console.WriteLine("********************************************");
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
             Console.WriteLine("Here are the contacts in your Address Book : ");
             foreach (var contact in addressList)
             {
                 Console.WriteLine(contact.FirstName + "\t" + contact.LastName + "\t" + contact.City + "\t" + contact.PhoneNumber);
             }
-            Console.WriteLine("********************************************");
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         }
     }
 }
