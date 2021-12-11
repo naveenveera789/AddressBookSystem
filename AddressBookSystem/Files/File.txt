@@ -1,0 +1,9 @@
+﻿FirstName : Naveen
+LastName : Veera
+Address : AutoNagar
+PhoneNumber : 8474098109
+EmailId : naveen@bridgelabz.com
+City : Vijayawada
+State : AndhraPradesh
+ZIP : 500083
+SNN : 173012021
