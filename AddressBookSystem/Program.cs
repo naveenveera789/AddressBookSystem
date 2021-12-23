@@ -12,7 +12,7 @@ namespace AddressBookSystem
             while (flag)
             {
                 Console.WriteLine("Welcome to the Address Book Program");
-                Console.WriteLine("Enter what you want to do : \n 1. Create Contacts \n 2. Add Contacts \n 3. Edit Contact \n 4. Delete Contact \n 5. Multiple Contacts \n 6. Refactor Method \n 7. Checking Duplicate Entry \n 8. Search Person in a City or State \n 9. View Persons by City or State \n 10. Number of Contact persons by City or State \n 11. Sort entries alphabetically by Person's name \n 12. Sort entries by City, State or Zipcode \n 13. Read or Write using File IO \n 14. Read or Write as CSV File \n 15. Exit");
+                Console.WriteLine("Enter what you want to do : \n 1. Create Contacts \n 2. Add Contacts \n 3. Edit Contact \n 4. Delete Contact \n 5. Multiple Contacts \n 6. Refactor Method \n 7. Checking Duplicate Entry \n 8. Search Person in a City or State \n 9. View Persons by City or State \n 10. Number of Contact persons by City or State \n 11. Sort entries alphabetically by Person's name \n 12. Sort entries by City, State or Zipcode \n 13. Read or Write using File IO \n 14. Read or Write as CSV File \n 15. Read or Write as JSON File \n 16. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -133,6 +133,9 @@ namespace AddressBookSystem
                         addressBook.ReadWriteAsCsv();
                         break;
                     case 15:
+                        addressBook.ReadWriteAsJson();
+                        break;
+                    case 16:
                         flag = false;
                         break;
                 }

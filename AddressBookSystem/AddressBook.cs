@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -247,6 +248,29 @@ namespace AddressBookSystem
                     csvExport.WriteRecords(records);
                 }
                 Console.WriteLine("The data is written in export csv file");
+            }
+        }
+        public void ReadWriteAsJson()
+        {
+            string importFilePath = @"C:\Users\navee\OneDrive\Documents\Bridgelabz practice\AddressBookSystem\AddressBookSystem\Files\import.json";
+            string exportFilePath = @"C:\Users\navee\OneDrive\Documents\Bridgelabz practice\AddressBookSystem\AddressBookSystem\Files\export.json";
+            using (StreamReader reader = new StreamReader(importFilePath))
+            {
+                var json = reader.ReadToEnd();
+                var records = JsonConvert.DeserializeObject<List<Contact>>(json);
+                Console.WriteLine("Read data successfully from import Json");
+                foreach (var data in records)
+                {
+                    Console.WriteLine(data.FirstName + "\t" + data.LastName + "\t" + data.Address + "\t" + data.City + "\t" + data.State + "\t" + data.Zip + "\t" + data.PhoneNumber + "\t" + data.Email + "\n");
+                }
+                Console.WriteLine("\n************  Now reading from import Json file and write to export Json file  ************");
+                JsonSerializer serializer = new JsonSerializer();
+                using (StreamWriter sw = new StreamWriter(exportFilePath))
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, records);
+                }
+                Console.WriteLine("The data is written in export Json file");
             }
         }
     }

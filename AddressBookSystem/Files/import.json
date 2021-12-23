@@ -1,0 +1,22 @@
+[
+  {
+    "FirstName" : "Naveen",
+    "LastName" : "Veera",
+    "Address" : "AutoNagar",
+    "City" : "Vijayawada",
+    "State" : "AndhraPradesh",
+    "ZIP" : "500081",
+    "PhoneNumber" : "7892582086",
+    "Email" : "naveen@bridgelabz.com"
+  },
+  {
+    "FirstName" : "Lokesh",
+    "LastName" : "Sai",
+    "Address" : "ClockTower",
+    "City" : "Warangal",
+    "State" : "Telangana",
+    "ZIP" : "587499",
+    "PhoneNumber" : "8528520575",
+    "Email" : "lokesh000@gmail.com"
+  }
+]
